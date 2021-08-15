@@ -1,2 +1,4 @@
 # problem-solving
-알고리즘 문제 풀이 코드
+Algorithm problem Solving Repository
+
+BOJ : https://www.acmicpc.net/user/tyjk32
