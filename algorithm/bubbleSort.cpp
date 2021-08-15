@@ -1,51 +1,56 @@
-public class BubbleSort {
+#include <iostream>
+#include <vector>
 
-    public static void main(String[] args) {
-        int[] arr = {5, 4, 1, 3, 2};
+using namespace std;
 
-        System.out.print("정렬 전 : ");
-        for(int i = 0; i < 5; ++i) System.out.print(arr[i] + " ");
-        System.out.println();
+void bubbleSortAscending(vector<int> v) {
+    int size = v.size() - 1;
 
-        bubbleSortAscending(arr);
-        bubbleSortDescending(arr);
-    }
-
-    public static void bubbleSortAscending(int[] arr) {
-        int[] arr2 = arr.clone();
-        int size = arr2.length - 1;
-
-        for(int i = 0; i < size; ++i) {
-            for(int j = 0; j < size - i; ++j) {
-                if(arr2[j] > arr2[j + 1]) {
-                    int temp = arr2[j];
-                    arr2[j] = arr2[j + 1];
-                    arr2[j + 1] = temp;
-                }
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size - i; ++j) {
+            if (v[j] > v[j + 1]) {
+                int temp = v[j];
+                v[j] = v[j + 1];
+                v[j + 1] = temp;
             }
         }
-
-        System.out.print("오름차순 정렬 후 : ");
-        for(int i = 0; i < 5; ++i) System.out.print(arr2[i] + " ");
-        System.out.println();
     }
 
-    public static void bubbleSortDescending(int[] arr) {
-        int[] arr2 = arr.clone();
-        int size = arr2.length - 1;
+    cout << "오름차순 정렬 후 : ";
+    for (int i = 0; i < 5; ++i) cout << v[i] << " ";
+    cout << '\n';
+}
 
-        for(int i = 0; i < size; ++i) {
-            for(int j = 0; j < size - i; ++j) {
-                if(arr2[j] < arr2[j + 1]) {
-                    int temp = arr2[j];
-                    arr2[j] = arr2[j + 1];
-                    arr2[j + 1] = temp;
-                }
+void bubbleSortDescending(vector<int> v) {
+    int size = v.size() - 1;
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size - i; ++j) {
+            if (v[j] < v[j + 1]) {
+                int temp = v[j];
+                v[j] = v[j + 1];
+                v[j + 1] = temp;
             }
         }
-
-        System.out.print("오름차순 정렬 후 : ");
-        for(int i = 0; i < 5; ++i) System.out.print(arr2[i] + " ");
-        System.out.println();
     }
+
+    cout << "내림차순 정렬 후 : ";
+    for (int i = 0; i < 5; ++i) cout << v[i] << " ";
+    cout << '\n';
+}
+
+int main(void) {
+    ios_base::sync_with_stdio(false);
+
+    vector<int> v = { 5, 4, 1, 3, 2 };
+
+    cout << "정렬 전 : ";
+    for (int i = 0; i < 5; ++i) cout << v[i] << " ";
+    cout << '\n';
+
+    bubbleSortAscending(v);
+    bubbleSortDescending(v);
+
+
+    return 0;
 }
