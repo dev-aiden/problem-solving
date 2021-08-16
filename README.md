@@ -1,4 +1,4 @@
 # problem-solving
-Algorithm problem Solving Repository
+Algorithm problem solving repository
 
 BOJ : https://www.acmicpc.net/user/tyjk32
