@@ -1,13 +1,16 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int a, b;
-        while(scanner.hasNextInt()) {
-            a = scanner.nextInt();
-            b = scanner.nextInt();
-            System.out.println(a + b);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        String str;
+        while((str = br.readLine()) != null) {
+            sb.append(str.charAt(0) + str.charAt(2) - 96).append('\n');
         }
+        System.out.println(sb);
+        br.close();
     }
 }
