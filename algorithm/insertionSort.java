@@ -1,4 +1,4 @@
-public class SelectionSort {
+public class InsertionSort {
 
     public static void main(String[] args) {
         int[] arr = {5, 4, 1, 3, 2};
@@ -7,11 +7,11 @@ public class SelectionSort {
         for(int i = 0; i < 5; ++i) System.out.print(arr[i] + " ");
         System.out.println();
 
-        selectionSortAscending(arr);
-        selectionSortDescending(arr);
+        insertionSortAscending(arr);
+        insertionSortDescending(arr);
     }
 
-    public static void selectionSortAscending(int[] arr) {
+    public static void insertionSortAscending(int[] arr) {
         int[] arr2 = arr.clone();
         int size = arr2.length;
         int index, key;
@@ -33,7 +33,7 @@ public class SelectionSort {
         System.out.println();
     }
 
-    public static void selectionSortDescending(int[] arr) {
+    public static void insertionSortDescending(int[] arr) {
         int[] arr2 = arr.clone();
         int size = arr2.length;
         int index, key;
