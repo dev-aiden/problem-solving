@@ -44,7 +44,7 @@ public class BubbleSort {
             }
         }
 
-        System.out.print("오름차순 정렬 후 : ");
+        System.out.print("내림차순 정렬 후 : ");
         for(int i = 0; i < 5; ++i) System.out.print(arr2[i] + " ");
         System.out.println();
     }
