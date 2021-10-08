@@ -23,5 +23,5 @@ int main(void) {
     }
     for (int i = 0; i < 3; ++i) solve(n, i);
     cout << max(max(d[n][0], d[n][1]), d[n][2]) << "\n";
-	return 0;
+    return 0;
 }
