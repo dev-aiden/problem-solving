@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Main {
+public class DequeExample {
 
     static Deque<Integer> d = new ArrayDeque<>();
 
