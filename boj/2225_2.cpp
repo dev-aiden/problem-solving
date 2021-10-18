@@ -16,11 +16,6 @@ int main(void) {
             }
         }
     }
-    long long ans = 0;
-    for (int i = 0; i <= n; ++i) {
-        ans += d[k - 1][n - i];
-        ans %= 1000000000;
-    }
-    cout << ans << "\n";
+    cout << d[k][n] << "\n";
     return 0;
 }
