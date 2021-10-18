@@ -21,11 +21,6 @@ public class Main {
                 }
             }
         }
-        long ans = 0;
-        for (int i = 0; i <= n; ++i) {
-            ans += d[k - 1][n - i];
-            ans %= 1000000000;
-        }
-        System.out.println(ans);
+        System.out.println(d[k][n]);
     }
 }
