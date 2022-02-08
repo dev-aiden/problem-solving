@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int check[1000003];
+int check[333333];
 
 int next(int num, int p) {
     int ret = 0;
