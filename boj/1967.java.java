@@ -17,24 +17,22 @@ class Pair {
 
 public class Main {
 
-    static List<Pair>[] arr = new List[100003];
-    static int[] dist = new int[100003];
-    static int[] check = new int[100003];
+    static List<Pair>[] arr = new List[10003];
+    static int[] dist = new int[10003];
+    static int[] check = new int[10003];
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         for(int i = 1; i <= n; ++i) arr[i] = new ArrayList<>();
         StringTokenizer st;
-        for(int i = 0; i < n; ++i) {
+        for(int i = 0; i < n - 1; ++i) {
             st = new StringTokenizer(br.readLine());
             int u = Integer.parseInt(st.nextToken());
-            while(true) {
-                int v = Integer.parseInt(st.nextToken());
-                if(v == -1) break;
-                int d = Integer.parseInt(st.nextToken());
-                arr[u].add(new Pair(v, d));
-            }
+            int v = Integer.parseInt(st.nextToken());
+            int w = Integer.parseInt(st.nextToken());
+            arr[u].add(new Pair(v, w));
+            arr[v].add(new Pair(u, w));
         }
         bfs(1);
         int maxNode = -1, maxDist = -1;
